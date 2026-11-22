@@ -25,6 +25,8 @@ WORKDIR /app
 
 COPY app.py .
 
+USER mboa
+
 ENV PATH=/opt/venv/bin:$PATH PYTHONUNBUFFERED=1
 
 HEALTHCHECK --interval=10s --timeout=3s --start-period=10s --retries=3 \
